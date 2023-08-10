@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_categories",
+  "info": {
+    "singularName": "home-category",
+    "pluralName": "home-categories",
+    "displayName": "HomeCategory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "home_category"
+    }
+  }
+}

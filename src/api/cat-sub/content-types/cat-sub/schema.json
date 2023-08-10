@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cat_subs",
+  "info": {
+    "singularName": "cat-sub",
+    "pluralName": "cat-subs",
+    "displayName": "CatSub",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "sub_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subcat.subcat",
+      "inversedBy": "cat_subs"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "cat_subs"
+    }
+  }
+}
